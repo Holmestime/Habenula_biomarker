@@ -102,16 +102,6 @@ def get_performance(data, label, n_repeats=200):
     np.save("./data/ml_performance.npy", result)
 
 if __name__ == '__main__':
-    config = {
-        "font.family": 'Arial',
-        'font.size': 8,
-        'xtick.direction': 'in',
-        'ytick.direction': 'in',
-        'figure.dpi': 300.0,
-        'pdf.fonttype': 42,
-        'ps.fonttype': 42
-    }
-    rcParams.update(config)
     data, label = load_all_feature_data()
     label = label.ravel()
     get_performance(data, label,n_repeats=200)
